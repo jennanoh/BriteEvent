@@ -1,8 +1,10 @@
+import moment from 'moment/moment'
 import React from 'react'
 import { Card } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
 const Event = ({event}) => {
+  
   return (
     <Card className= 'border-0 my-3 p-3 rounded'>
       <Link to={`/event/${event._id}`}>
@@ -15,7 +17,7 @@ const Event = ({event}) => {
           </Card.Title>
         </Link>
           <Card.Text className='mb-0 lh-1'>
-          <small>{event.startDate}</small>
+          <small>{moment(event.startDate).format('MMMM Do YYYY, h:mm a')}</small>
           </Card.Text>
           <Card.Text className='text-muted mb-2 lh-1'>
             <small>{event.location}</small>

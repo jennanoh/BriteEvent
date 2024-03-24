@@ -1,6 +1,6 @@
 import React from 'react'
 import { Card, Row, Col, Container, Button } from 'react-bootstrap'
-
+import { Link } from 'react-router-dom'
 
 
 
@@ -11,65 +11,82 @@ const Icons = () => {
       <Row className='flex-nowrap overflow-x-auto mx-3'>
       <Col>
         <Card className='icon-card shadow-none'>
-          <Button variant='outline-primary rounded-circle btn-lg stretched-link' href ='/music'><i className="fa-solid fa-music py-4 "></i></Button>
+          <Button variant='light rounded-circle btn-lg'>
+            <Link to='/music'><i className="fa-solid fa-music py-4" style={{color: 'black'}}></i></Link>
+          </Button>
           <Card.Title className='icon-title'>
-            <small>Music</small>
+            <Link to='/music' className='icon-link'><small>Music</small></Link>
+          </Card.Title>
+          
+        </Card>
+      </Col>
+      <Col>
+        <Card className='icon-card shadow-none'>
+          <Button variant='light rounded-circle btn-lg'>
+            <Link to='/nightlife'><i className="fa-solid fa-champagne-glasses py-4" style={{color:'black'}}></i></Link>
+          </Button>
+          <Card.Title className='icon-title'>
+            <Link to='/nightlife' className='icon-link'><small>Nightlife</small></Link>
           </Card.Title>
         </Card>
       </Col>
       <Col>
         <Card className='icon-card shadow-none'>
-          <Button variant='outline-primary rounded-circle btn-lg stretched-link' href ='/nightlife'><i className="fa-solid fa-champagne-glasses py-4 "></i></Button>
+          <Button variant='light rounded-circle btn-lg'>
+            <Link to='visualarts'><i className="fa-solid fa-palette py-4" style={{color:'black'}}></i></Link>
+          </Button>
           <Card.Title className='icon-title'>
-            <small>Nightlife</small>
+            <Link to='/visualarts' className='icon-link'><small>Visual Arts</small></Link>
           </Card.Title>
         </Card>
       </Col>
       <Col>
         <Card className='icon-card shadow-none'>
-          <Button variant='outline-primary rounded-circle btn-lg stretched-link' href ='/visualarts'><i className="fa-solid fa-palette py-4 "></i></Button>
+          <Button variant='light rounded-circle btn-lg'>
+            <Link to='/holidays'><i className="fa-solid fa-calendar-days py-4" style={{color:'black'}}></i></Link>
+          </Button>
           <Card.Title className='icon-title'>
-            <small>Visual Arts</small>
+            <Link to='/holidays' className='icon-link'><small>Holidays</small></Link>
           </Card.Title>
         </Card>
       </Col>
       <Col>
         <Card className='icon-card shadow-none'>
-          <Button variant='outline-primary rounded-circle btn-lg stretched-link' href ='/holidays'><i className="fa-solid fa-calendar-days py-4 "></i></Button>
+          <Button variant='light rounded-circle btn-lg'>
+            <Link to='/health'><i className="fa-solid fa-stethoscope py-4" style={{color:'black'}}></i></Link>
+          </Button>
           <Card.Title className='icon-title'>
-            <small>Holidays</small>
+            <Link to='/health' className='icon-link'><small>Health</small></Link>
           </Card.Title>
         </Card>
       </Col>
       <Col>
         <Card className='icon-card shadow-none'>
-          <Button variant='outline-primary rounded-circle btn-lg stretched-link' href ='/health'><i className="fa-solid fa-stethoscope py-4 "></i></Button>
+          <Button variant='light rounded-circle btn-lg'>
+            <Link to='/hobbies'><i className="fa-solid fa-puzzle-piece py-4" style={{color:'black'}}></i></Link>
+          </Button>
           <Card.Title className='icon-title'>
-            <small>Health</small>
+            <Link to='/hobbies' className='icon-link'><small>Hobbies</small></Link>
           </Card.Title>
         </Card>
       </Col>
       <Col>
         <Card className='icon-card shadow-none'>
-          <Button variant='outline-primary rounded-circle btn-lg stretched-link' href ='/hobbies'><i className="fa-solid fa-puzzle-piece py-4 "></i></Button>
+          <Button variant='light rounded-circle btn-lg'>
+            <Link to='/business'><i className="fa-solid fa-user-tie py-4" style={{color:'black'}}></i></Link>
+          </Button>
           <Card.Title className='icon-title'>
-            <small>Hobbies</small>
+            <Link to='/business' className='icon-link'><small>Business</small></Link>
           </Card.Title>
         </Card>
       </Col>
       <Col>
         <Card className='icon-card shadow-none'>
-          <Button variant='outline-primary rounded-circle btn-lg stretched-link' href ='/business'><i className="fa-solid fa-user-tie py-4 "></i></Button>
-          <Card.Title className='icon-title'>
-            <small>Business</small>
-          </Card.Title>
-        </Card>
-      </Col>
-      <Col>
-        <Card className='icon-card shadow-none'>
-          <Button variant='outline-primary rounded-circle btn-lg stretched-link' href ='/food&drink'><i className="fa-solid fa-utensils py-4 "></i></Button>
-          <Card.Title className='icon-title'>
-            <small>Food & Drink</small>
+          <Button variant='light rounded-circle btn-lg'>
+            <Link to='/food&drink'><i className="fa-solid fa-utensils py-4" style={{color:'black'}}></i></Link>
+          </Button>
+          <Card.Title className='icon-title text-secondary-emphasis'>
+            <Link to='/food&drink' className='icon-link'><small>Food & Drink</small></Link>
           </Card.Title>
         </Card>
       </Col>

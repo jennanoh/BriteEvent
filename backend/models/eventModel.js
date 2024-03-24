@@ -13,6 +13,10 @@ const eventSchema = mongoose.Schema({
     type:String,
     required:true
   },
+  category:{
+    type:String,
+    required:true
+  },
   image:{
       type:String,
       required:true
@@ -26,7 +30,7 @@ const eventSchema = mongoose.Schema({
     required:true
   },
   startDate:{
-    type:String,
+    type:Date,
     required:true
   },
   price:{

@@ -16,19 +16,6 @@ const Banner = () => {
                     <div className="d-none d-md-block">
                         <Image src='/images/home-banner-image.png' alt='banner-image' fluid />
                     </div>
-                    {/* New container to hold nav icon settings to keep consistent layout
-                    with card event area */}
-                    <Container fluid="xxl" className="px-md-5">
-                        {/* div set to absolute position to sit on top of image */}
-                        <div className="position-absolute bottom-0">
-                            <Nav href="/local-events" className="mb-5 rounded-2 px-2 py-1 bg-danger" >
-                                <Nav.Link className="text-light fw-bold">
-                                    Find your next event
-                                </Nav.Link>
-                            </Nav>
-                        </div>
-                    </Container>
-
                 </div>
             </section>
         </Container>
