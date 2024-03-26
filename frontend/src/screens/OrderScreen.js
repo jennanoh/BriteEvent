@@ -1,4 +1,4 @@
-import {Modal, Row, Col, Container, Button, Card, Image } from 'react-bootstrap'
+import {Modal, Row, Col, Container, Button, Image } from 'react-bootstrap'
 import React, {useState, useRef} from 'react'
 import {useSelector, useDispatch} from 'react-redux'
 import CheckoutScreen from './CheckoutScreen'
@@ -70,13 +70,11 @@ const OrderScreen = (props) =>
         <Modal.Body>
           <Row className='justify-content-md-center'>
             <Col md={9}>
-        <Row>
-            <Image src={event.image} fluid />
-          </Row> 
+            <Image src={event.image} fluid/>
             <Container className='border'>              
                   <Row className='mt-3'>
                     <Col md={8} xs={7}>
-                        <h6 className='mb-0'>General Admission</h6>
+                        <h6 className='mb-0'>General Admission:</h6>
                     </Col>
                     <Col md={4} xs={5}>
                       <div className="ticket-options" >
@@ -92,8 +90,7 @@ const OrderScreen = (props) =>
                   </Row>
                   <Row className='mb-3'>
                     <Col>
-                      <strong>${event.price}</strong>              
-                      <div>sales end on Mar 9, 2024</div>
+                      <div>${event.price}</div>              
                     </Col>
                   </Row>
           </Container>

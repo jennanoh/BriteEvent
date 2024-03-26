@@ -11,7 +11,6 @@ import LoginScreen from './screens/LoginScreen';
 import RegisterScreen from './screens/RegisterScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import OrderDetailsScreen from './screens/OrderDetailsScreen';
-import CreateEvent from './screens/CreateEvent';
 import Music from './IconScreens/Music';
 import VisualArts from './IconScreens/VisualArt';
 import Nightlife from './IconScreens/Nightlife';
@@ -20,6 +19,7 @@ import Health from './IconScreens/Health';
 import Hobbies from './IconScreens/Hobbies';
 import Business from './IconScreens/Business';
 import FoodDrink from './IconScreens/Food&Drink';
+import CreateEventScreen from './screens/CreateEventScreen';
 
 function App() {
   return (
@@ -35,7 +35,7 @@ function App() {
                 <Route path='/register' exact element= {<RegisterScreen/>}/>
                 <Route path='/profile' exact element= {<ProfileScreen/>}/>
                 <Route path='/order/:id' element= {<OrderDetailsScreen/>}/>
-                <Route path='/organizer' element={<CreateEvent/>}/>
+                <Route path='/organizer' element={<CreateEventScreen/>}/>
                 <Route path='/music' element={<Music/>}/>
                 <Route path='/visualarts' element={<VisualArts/>}/>
                 <Route path='/nightlife' element={<Nightlife/>}/>

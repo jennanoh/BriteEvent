@@ -1,11 +1,12 @@
 import React, {useEffect, useState} from 'react'
-import { useParams} from 'react-router-dom'
+import { useParams, Link} from 'react-router-dom'
 import { useSelector, useDispatch} from 'react-redux'
 import { Row, Container, ListGroup, Col, Carousel, ListGroupItem, Button } from 'react-bootstrap'
 import { eventDetailsAction } from '../actions/eventActions'
 import Loader from '../Components/Loader'
 import Message from '../Components/Message'
 import OrderScreen from './OrderScreen'
+import moment from 'moment'
 
 const EventScreen = () => {
 
@@ -40,12 +41,15 @@ const EventScreen = () => {
       :error? <Message variant='danger'>{error}</Message>
       :(
         <>
-        <Container fluid="xxl" className="px-md-5 my-4 pb-2">
-          <Row >
-            <Col sm={12}>
+        <Link className='btn btn-light ms-3 my-2' to='/'>
+          {'< Back to Events'}
+        </Link>
+        <Container fluid="xxl" className="mb-5 mt-3">
+          <Row className='justify-content-center'>
+            <Col sm={8}>
               <Carousel className="event-hero">              
                 <Carousel.Item className="text-center">
-                  <img src={event.image} alt='event'/>
+                  <img src={event.image} alt='event'className='event-screen-img'/>
                 </Carousel.Item>
               </Carousel>
             </Col>
@@ -57,7 +61,7 @@ const EventScreen = () => {
 
               <ListGroup variant='flush' className="border border-0 ">     
                   <ListGroupItem className="border-0 mt-3 pb-0">
-                    <h5> {event.startDate} </h5>
+                    <h5> {moment(event.startDate).format('MMMM Do YYYY, h:mm a')} </h5>
                   </ListGroupItem>
                   <ListGroupItem className='border-0 py-0'>
                     <h2>{event.name}</h2>

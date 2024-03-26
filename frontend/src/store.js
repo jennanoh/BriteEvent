@@ -3,6 +3,7 @@ import {eventListReducer, eventDetailsReducer} from './reducers/eventReducer'
 import { userDetailsReducer, userReducer, userRegisterReducer, userUpdateProfileReducer } from './reducers/userReducer'
 import { orderCreateReducer, orderDetailsReducer, orderPayReducer } from './reducers/orderReducer'
 import { ticketReducer } from './reducers/ticketReducer'
+import { eventCreateReducer } from './reducers/organizerReducer'
 
 
 const rootReducer = combineReducers({
@@ -15,12 +16,11 @@ const rootReducer = combineReducers({
   ticket: ticketReducer,
   orderCreate: orderCreateReducer,
   orderDetails: orderDetailsReducer,
-  orderPay: orderPayReducer
+  orderPay: orderPayReducer,
+  eventCreate: eventCreateReducer
 })
 
-const userInfoFromStorage = localStorage.getItem('userInfo')
-? JSON.parse(localStorage.getItem('userInfo'))
-: null
+const userInfoFromStorage = localStorage.getItem('userInfo')? JSON.parse(localStorage.getItem('userInfo')): null
 
 const initialState = {
   userLogin: {userInfo: userInfoFromStorage}
@@ -28,7 +28,7 @@ const initialState = {
 
 const store = configureStore({
   reducer:rootReducer,
-  preloadState: initialState
+  preloadedState: initialState
 })
 
 export default store

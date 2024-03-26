@@ -64,3 +64,12 @@ fine{
   height: 35px;
   width: 100px;
 }
+
+.card-image{
+  width: 100%;
+  height: 100%;
+}
+.event-screen-img{
+  max-width: 100%;
+  height: auto;
+}

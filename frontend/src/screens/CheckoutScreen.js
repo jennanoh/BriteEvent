@@ -1,7 +1,6 @@
 
-import {Modal, Row, Col, Container, Button, Form, InputGroup} from 'react-bootstrap'
-import React, {useEffect, useRef, useState} from 'react'
-import {useNavigate, useParams} from 'react-router-dom'
+import {Modal, Row, Col, Container, Button, Form} from 'react-bootstrap'
+import React, { useRef, useState} from 'react'
 import { useDispatch, useSelector} from 'react-redux'
 import PlaceOrderScreen from './PlaceOrderScreen'
 import { savePaymentMethod } from '../actions/ticketActions'
@@ -10,7 +9,6 @@ const CheckoutScreen = (props) => {
 
   const dispatch = useDispatch()
   const [paymentMethod, setPaymentMethod] = useState('Paypal')
-  const Navigate = useNavigate()
   let closeCheckoutModal = useRef(false)
   
   const userLogin = useSelector((state) => state.userLogin)

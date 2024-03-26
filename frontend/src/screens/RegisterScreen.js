@@ -17,13 +17,14 @@ const RegisterScreen = () => {
   const dispatch = useDispatch()
   const location = useLocation()
 
-  const redirect = location.search? location.search.split('=')[1]:'/'
+  const redirect = location.search? location.search.split('=')[1]: ('/')
   const userRegister = useSelector((state) => state.userRegister)
   const {loading, error, userInfo} = userRegister
 
   useEffect(() => {
     if(userInfo){
       navigate(redirect)
+      navigate(0)
     }
   },[navigate, userInfo, redirect])
 
