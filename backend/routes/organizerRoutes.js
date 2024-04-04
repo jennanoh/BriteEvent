@@ -1,6 +1,5 @@
 import express from 'express'
 import { createEvent } from '../controller/organizerController.js'
-import { cloudinaryMiddleware } from '../middleware/cloudinaryMiddleware.js'
 
 const router = express.Router()
 
