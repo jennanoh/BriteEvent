@@ -10,7 +10,7 @@ import path from 'path'
 
 const app = express()
 dotenv.config()
-
+connectDB()
 
 app.use(express.json({ limit: "50mb" })) //data from FE will be converted to json
 
@@ -36,6 +36,4 @@ if (process.env.NODE_ENV === 'production'){ //if in production mode
 
 app.use(errorHandler)
 const port = process.env.PORT
-connectDB().then(() =>{
-  app.listen(port, console.log(`Server is running on port ${port}`))
-})
+app.listen(port, console.log(`Server is running on port ${port}`))
