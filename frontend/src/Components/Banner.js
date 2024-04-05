@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Image, Nav} from 'react-bootstrap';
+import { Container, Image} from 'react-bootstrap';
 
 const Banner = () => {
     return (
