@@ -27,7 +27,7 @@ app.get('/api/config/paypal', (req, res) =>
 )
 
 const __dirname = path.resolve() //directory
-if (process.env.NODE_ENV === 'production'){ //if in production mode
+if (process.env.RAILWAY_ENVIRONMENT_NAME === 'production'){ //if in production mode
   app.use(express.static(path.join(__dirname, '/frontend/build')))
   app.get('*', (req, res)=>{
     res.sendFile(path.resolve(__dirname,'frontend', 'build', 'index.html'))
@@ -36,4 +36,4 @@ if (process.env.NODE_ENV === 'production'){ //if in production mode
 
 app.use(errorHandler)
 const port = process.env.PORT
-app.listen(port, console.log(`Server is running on port ${port}`))
+app.listen(port, "0.0.0.0", console.log(`Server is running on port ${port}`))
